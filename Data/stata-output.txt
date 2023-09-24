@@ -1,0 +1,868 @@
+. do "D:\Aalto University\B.Sc Econ - Immigration & Public Transportation\Immigrant Pattern & Public Transport Accessib
+> ility\Scripts\regression.do"
+
+. import delimited using "D:\Aalto University\B.Sc Econ - Immigration & Public Transportation\Immigrant Pattern & Publi
+> c Transport Accessibility\Data\extrapolated.csv", clear
+(encoding automatically selected: UTF-8)
+(27 vars, 2,129 obs)
+
+. 
+. encode id, gen(district_id)
+
+. xtset district_id year
+
+Panel variable: district_id (unbalanced)
+ Time variable: year, 2013 to 2020, but with a gap
+         Delta: 1 unit
+
+. 
+. * Create a binary variable for original data years
+. gen original_data = (year == 2013 | year == 2015 | year == 2018)
+
+. 
+. * Focus only on main CBD / Helsinki City Centre (both simple and log)
+. xtreg non_official_lang_percentage v20, fe
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0750                                         min =          1
+     Between = 0.0253                                         avg =        7.9
+     Overall = 0.0191                                         max =          8
+
+                                                F(1, 1860)        =     150.82
+corr(u_i, Xb) = -0.5248                         Prob > F          =     0.0000
+
+------------------------------------------------------------------------------
+non_offici~e | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+         v20 |   .0030839   .0002511    12.28   0.000     .0025914    .0035764
+       _cons |   .0390548   .0072248     5.41   0.000     .0248853    .0532243
+-------------+----------------------------------------------------------------
+     sigma_u |     .09001
+     sigma_e |    .022455
+         rho |  .94141001   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+F test that all u_i=0: F(267, 1860) = 92.74                  Prob > F = 0.0000
+
+. xtreg non_official_lang_percentage v20 if original_data == 1, fe
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0912                                         min =          1
+     Between = 0.0319                                         avg =        3.0
+     Overall = 0.0255                                         max =          3
+
+                                                F(1, 528)         =      53.02
+corr(u_i, Xb) = -0.5408                         Prob > F          =     0.0000
+
+------------------------------------------------------------------------------
+non_offici~e | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+         v20 |   .0029389   .0004036     7.28   0.000      .002146    .0037318
+       _cons |   .0345051   .0115776     2.98   0.003     .0117612    .0572489
+-------------+----------------------------------------------------------------
+     sigma_u |  .08582427
+     sigma_e |  .02219857
+         rho |  .93729447   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+F test that all u_i=0: F(267, 528) = 31.57                   Prob > F = 0.0000
+
+. xtreg non_official_lang_percentage v20, fe vce(robust)
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0750                                         min =          1
+     Between = 0.0253                                         avg =        7.9
+     Overall = 0.0191                                         max =          8
+
+                                                F(1, 267)         =      58.63
+corr(u_i, Xb) = -0.5248                         Prob > F          =     0.0000
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+         v20 |   .0030839   .0004027     7.66   0.000     .0022909    .0038768
+       _cons |   .0390548    .011561     3.38   0.001     .0162925    .0618172
+-------------+----------------------------------------------------------------
+     sigma_u |     .09001
+     sigma_e |    .022455
+         rho |  .94141001   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage v20 if original_data == 1, fe vce(robust)
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0912                                         min =          1
+     Between = 0.0319                                         avg =        3.0
+     Overall = 0.0255                                         max =          3
+
+                                                F(1, 267)         =      54.08
+corr(u_i, Xb) = -0.5408                         Prob > F          =     0.0000
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+         v20 |   .0029389   .0003996     7.35   0.000     .0021521    .0037258
+       _cons |   .0345051   .0114368     3.02   0.003     .0119873    .0570228
+-------------+----------------------------------------------------------------
+     sigma_u |  .08582427
+     sigma_e |  .02219857
+         rho |  .93729447   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. 
+. gen log_main = log(v20 + 1)
+
+. xtreg non_official_lang_percentage log_main, fe
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0727                                         min =          1
+     Between = 0.0022                                         avg =        7.9
+     Overall = 0.0013                                         max =          8
+
+                                                F(1, 1860)        =     145.92
+corr(u_i, Xb) = -0.5755                         Prob > F          =     0.0000
+
+------------------------------------------------------------------------------
+non_offici~e | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    log_main |    .095847   .0079346    12.08   0.000     .0802854    .1114086
+       _cons |  -.1871841   .0260618    -7.18   0.000    -.2382975   -.1360706
+-------------+----------------------------------------------------------------
+     sigma_u |  .09459719
+     sigma_e |  .02248241
+         rho |  .94653544   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+F test that all u_i=0: F(267, 1860) = 94.30                  Prob > F = 0.0000
+
+. xtreg non_official_lang_percentage log_main if original_data == 1, fe
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0886                                         min =          1
+     Between = 0.0043                                         avg =        3.0
+     Overall = 0.0032                                         max =          3
+
+                                                F(1, 528)         =      51.33
+corr(u_i, Xb) = -0.5883                         Prob > F          =     0.0000
+
+------------------------------------------------------------------------------
+non_offici~e | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    log_main |   .0908807   .0126847     7.16   0.000     .0659619    .1157995
+       _cons |  -.1795499   .0416232    -4.31   0.000    -.2613173   -.0977824
+-------------+----------------------------------------------------------------
+     sigma_u |  .09031496
+     sigma_e |  .02223082
+         rho |  .94287257   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+F test that all u_i=0: F(267, 528) = 32.24                   Prob > F = 0.0000
+
+. xtreg non_official_lang_percentage log_main, fe vce(robust)
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0727                                         min =          1
+     Between = 0.0022                                         avg =        7.9
+     Overall = 0.0013                                         max =          8
+
+                                                F(1, 267)         =      59.03
+corr(u_i, Xb) = -0.5755                         Prob > F          =     0.0000
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    log_main |    .095847   .0124748     7.68   0.000     .0712855    .1204085
+       _cons |  -.1871841   .0409675    -4.57   0.000    -.2678444   -.1065237
+-------------+----------------------------------------------------------------
+     sigma_u |  .09459719
+     sigma_e |  .02248241
+         rho |  .94653544   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage log_main if original_data == 1, fe vce(cluster district_id)
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0886                                         min =          1
+     Between = 0.0043                                         avg =        3.0
+     Overall = 0.0032                                         max =          3
+
+                                                F(1, 267)         =      55.36
+corr(u_i, Xb) = -0.5883                         Prob > F          =     0.0000
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    log_main |   .0908807    .012215     7.44   0.000     .0668307    .1149307
+       _cons |  -.1795499   .0400746    -4.48   0.000    -.2584523   -.1006474
+-------------+----------------------------------------------------------------
+     sigma_u |  .09031496
+     sigma_e |  .02223082
+         rho |  .94287257   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. 
+. * Focus only on time_to_fastest_cbd (both simple and log)
+. xtreg non_official_lang_percentage time_to_fastest_cbd, fe
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0154                                         min =          1
+     Between = 0.0613                                         avg =        7.9
+     Overall = 0.0573                                         max =          8
+
+                                                F(1, 1860)        =      29.17
+corr(u_i, Xb) = -0.0035                         Prob > F          =     0.0000
+
+-------------------------------------------------------------------------------------
+non_official_lang~e | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+time_to_fastest_cbd |  -.0021507   .0003982    -5.40   0.000    -.0029317   -.0013697
+              _cons |   .1561515   .0053141    29.38   0.000     .1457292    .1665737
+--------------------+----------------------------------------------------------------
+            sigma_u |  .07476863
+            sigma_e |   .0231667
+                rho |  .91240542   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+F test that all u_i=0: F(267, 1860) = 83.05                  Prob > F = 0.0000
+
+. xtreg non_official_lang_percentage time_to_fastest_cbd if original_data == 1, fe
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0169                                         min =          1
+     Between = 0.0676                                         avg =        3.0
+     Overall = 0.0659                                         max =          3
+
+                                                F(1, 528)         =       9.07
+corr(u_i, Xb) = 0.0248                          Prob > F          =     0.0027
+
+-------------------------------------------------------------------------------------
+non_official_lang~e | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+time_to_fastest_cbd |  -.0019533   .0006486    -3.01   0.003    -.0032274   -.0006792
+              _cons |   .1445676   .0086581    16.70   0.000      .127559    .1615762
+--------------------+----------------------------------------------------------------
+            sigma_u |  .07053079
+            sigma_e |  .02308892
+                rho |  .90320842   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+F test that all u_i=0: F(267, 528) = 27.75                   Prob > F = 0.0000
+
+. xtreg non_official_lang_percentage time_to_fastest_cbd, fe vce(robust)
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0154                                         min =          1
+     Between = 0.0613                                         avg =        7.9
+     Overall = 0.0573                                         max =          8
+
+                                                F(1, 267)         =       7.68
+corr(u_i, Xb) = -0.0035                         Prob > F          =     0.0060
+
+                                 (Std. err. adjusted for 268 clusters in district_id)
+-------------------------------------------------------------------------------------
+                    |               Robust
+non_official_lang~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+time_to_fastest_cbd |  -.0021507   .0007761    -2.77   0.006    -.0036787   -.0006227
+              _cons |   .1561515   .0103102    15.15   0.000     .1358519     .176451
+--------------------+----------------------------------------------------------------
+            sigma_u |  .07476863
+            sigma_e |   .0231667
+                rho |  .91240542   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage time_to_fastest_cbd if original_data == 1, fe vce(robust)
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0169                                         min =          1
+     Between = 0.0676                                         avg =        3.0
+     Overall = 0.0659                                         max =          3
+
+                                                F(1, 267)         =       7.13
+corr(u_i, Xb) = 0.0248                          Prob > F          =     0.0080
+
+                                 (Std. err. adjusted for 268 clusters in district_id)
+-------------------------------------------------------------------------------------
+                    |               Robust
+non_official_lang~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+time_to_fastest_cbd |  -.0019533   .0007314    -2.67   0.008    -.0033932   -.0005133
+              _cons |   .1445676   .0097196    14.87   0.000     .1254307    .1637045
+--------------------+----------------------------------------------------------------
+            sigma_u |  .07053079
+            sigma_e |  .02308892
+                rho |  .90320842   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage time_to_fastest_cbd, fe vce(cluster district_id)
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0154                                         min =          1
+     Between = 0.0613                                         avg =        7.9
+     Overall = 0.0573                                         max =          8
+
+                                                F(1, 267)         =       7.68
+corr(u_i, Xb) = -0.0035                         Prob > F          =     0.0060
+
+                                 (Std. err. adjusted for 268 clusters in district_id)
+-------------------------------------------------------------------------------------
+                    |               Robust
+non_official_lang~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+time_to_fastest_cbd |  -.0021507   .0007761    -2.77   0.006    -.0036787   -.0006227
+              _cons |   .1561515   .0103102    15.15   0.000     .1358519     .176451
+--------------------+----------------------------------------------------------------
+            sigma_u |  .07476863
+            sigma_e |   .0231667
+                rho |  .91240542   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage time_to_fastest_cbd if original_data == 1, fe vce(cluster district_id)
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0169                                         min =          1
+     Between = 0.0676                                         avg =        3.0
+     Overall = 0.0659                                         max =          3
+
+                                                F(1, 267)         =       7.13
+corr(u_i, Xb) = 0.0248                          Prob > F          =     0.0080
+
+                                 (Std. err. adjusted for 268 clusters in district_id)
+-------------------------------------------------------------------------------------
+                    |               Robust
+non_official_lang~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+time_to_fastest_cbd |  -.0019533   .0007314    -2.67   0.008    -.0033932   -.0005133
+              _cons |   .1445676   .0097196    14.87   0.000     .1254307    .1637045
+--------------------+----------------------------------------------------------------
+            sigma_u |  .07053079
+            sigma_e |  .02308892
+                rho |  .90320842   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+
+. 
+. gen log_fastest = log(time_to_fastest_cbd + 1)
+
+. xtreg non_official_lang_percentage log_fastest, fe
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0242                                         min =          1
+     Between = 0.0429                                         avg =        7.9
+     Overall = 0.0412                                         max =          8
+
+                                                F(1, 1860)        =      46.13
+corr(u_i, Xb) = -0.2657                         Prob > F          =     0.0000
+
+------------------------------------------------------------------------------
+non_offici~e | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+ log_fastest |  -.0392813   .0057832    -6.79   0.000    -.0506236    -.027939
+       _cons |   .2202184   .0136481    16.14   0.000     .1934513    .2469856
+-------------+----------------------------------------------------------------
+     sigma_u |   .0783785
+     sigma_e |  .02306337
+         rho |  .92031308   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+F test that all u_i=0: F(267, 1860) = 85.42                  Prob > F = 0.0000
+
+. xtreg non_official_lang_percentage log_fastest if original_data == 1, fe
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0264                                         min =          1
+     Between = 0.0461                                         avg =        3.0
+     Overall = 0.0465                                         max =          3
+
+                                                F(1, 528)         =      14.32
+corr(u_i, Xb) = -0.2394                         Prob > F          =     0.0002
+
+------------------------------------------------------------------------------
+non_offici~e | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+ log_fastest |  -.0358406   .0094708    -3.78   0.000    -.0544457   -.0172354
+       _cons |   .2031661   .0223589     9.09   0.000     .1592428    .2470893
+-------------+----------------------------------------------------------------
+     sigma_u |   .0735865
+     sigma_e |  .02297686
+         rho |  .91116535   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+F test that all u_i=0: F(267, 528) = 28.66                   Prob > F = 0.0000
+
+. xtreg non_official_lang_percentage log_fastest, fe vce(robust)
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0242                                         min =          1
+     Between = 0.0429                                         avg =        7.9
+     Overall = 0.0412                                         max =          8
+
+                                                F(1, 267)         =      14.22
+corr(u_i, Xb) = -0.2657                         Prob > F          =     0.0002
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+ log_fastest |  -.0392813   .0104182    -3.77   0.000    -.0597935   -.0187691
+       _cons |   .2202184   .0245697     8.96   0.000     .1718434    .2685934
+-------------+----------------------------------------------------------------
+     sigma_u |   .0783785
+     sigma_e |  .02306337
+         rho |  .92031308   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage log_fastest if original_data == 1, fe vce(robust)
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0264                                         min =          1
+     Between = 0.0461                                         avg =        3.0
+     Overall = 0.0465                                         max =          3
+
+                                                F(1, 267)         =      12.43
+corr(u_i, Xb) = -0.2394                         Prob > F          =     0.0005
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+ log_fastest |  -.0358406   .0101659    -3.53   0.000    -.0558561    -.015825
+       _cons |   .2031661   .0239839     8.47   0.000     .1559444    .2503877
+-------------+----------------------------------------------------------------
+     sigma_u |   .0735865
+     sigma_e |  .02297686
+         rho |  .91116535   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage log_fastest, fe vce(cluster district_id)
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0242                                         min =          1
+     Between = 0.0429                                         avg =        7.9
+     Overall = 0.0412                                         max =          8
+
+                                                F(1, 267)         =      14.22
+corr(u_i, Xb) = -0.2657                         Prob > F          =     0.0002
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+ log_fastest |  -.0392813   .0104182    -3.77   0.000    -.0597935   -.0187691
+       _cons |   .2202184   .0245697     8.96   0.000     .1718434    .2685934
+-------------+----------------------------------------------------------------
+     sigma_u |   .0783785
+     sigma_e |  .02306337
+         rho |  .92031308   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage log_fastest if original_data == 1, fe vce(cluster district_id)
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.0264                                         min =          1
+     Between = 0.0461                                         avg =        3.0
+     Overall = 0.0465                                         max =          3
+
+                                                F(1, 267)         =      12.43
+corr(u_i, Xb) = -0.2394                         Prob > F          =     0.0005
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+ log_fastest |  -.0358406   .0101659    -3.53   0.000    -.0558561    -.015825
+       _cons |   .2031661   .0239839     8.47   0.000     .1559444    .2503877
+-------------+----------------------------------------------------------------
+     sigma_u |   .0735865
+     sigma_e |  .02297686
+         rho |  .91116535   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. 
+. * Multiple regression with all CBDs
+. xtreg non_official_lang_percentage v9-v23, fe vce(cluster district_id)
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.3026                                         min =          1
+     Between = 0.0014                                         avg =        7.9
+     Overall = 0.0064                                         max =          8
+
+                                                F(15, 267)        =      17.01
+corr(u_i, Xb) = -0.3325                         Prob > F          =     0.0000
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+          v9 |   .0014118   .0001598     8.84   0.000     .0010972    .0017264
+         v10 |  -.0018329   .0003859    -4.75   0.000    -.0025926   -.0010732
+         v11 |  -.0016831   .0005361    -3.14   0.002    -.0027386   -.0006275
+         v12 |   .0009758   .0004465     2.19   0.030     .0000967     .001855
+         v13 |  -.0008365    .000423    -1.98   0.049    -.0016694   -3.63e-06
+         v14 |   .0001996   .0005096     0.39   0.696    -.0008037     .001203
+         v15 |   .0010427   .0005571     1.87   0.062    -.0000541    .0021395
+         v16 |  -.0008293   .0003444    -2.41   0.017    -.0015073   -.0001513
+         v17 |   .0016697   .0008734     1.91   0.057      -.00005    .0033894
+         v18 |   -.000718   .0006251    -1.15   0.252    -.0019489    .0005129
+         v19 |   .0018017   .0008092     2.23   0.027     .0002084    .0033949
+         v20 |   .0019813   .0014276     1.39   0.166    -.0008294    .0047921
+         v21 |  -.0011127   .0014113    -0.79   0.431    -.0038914    .0016659
+         v22 |  -.0011533   .0002921    -3.95   0.000    -.0017285   -.0005782
+         v23 |  -.0010067   .0004997    -2.01   0.045    -.0019905   -.0000229
+       _cons |   .1548784   .0252418     6.14   0.000     .1051802    .2045767
+-------------+----------------------------------------------------------------
+     sigma_u |  .08243166
+     sigma_e |  .01957161
+         rho |  .94663603   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage v9-v23 if original_data == 1, fe vce(cluster district_id)
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.3469                                         min =          1
+     Between = 0.0000                                         avg =        3.0
+     Overall = 0.0020                                         max =          3
+
+                                                F(15, 267)        =      14.15
+corr(u_i, Xb) = -0.3518                         Prob > F          =     0.0000
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+          v9 |   .0013099   .0001557     8.42   0.000     .0010035    .0016164
+         v10 |  -.0016161   .0003801    -4.25   0.000    -.0023644   -.0008677
+         v11 |  -.0014438   .0005242    -2.75   0.006    -.0024759   -.0004116
+         v12 |   .0010008   .0005179     1.93   0.054     -.000019    .0020205
+         v13 |  -.0006769   .0004256    -1.59   0.113    -.0015149    .0001612
+         v14 |   .0000682   .0004995     0.14   0.892    -.0009153    .0010517
+         v15 |   .0009221   .0005276     1.75   0.082    -.0001168     .001961
+         v16 |   -.000686   .0003693    -1.86   0.064    -.0014131    .0000411
+         v17 |   .0015483   .0007998     1.94   0.054    -.0000265    .0031231
+         v18 |   -.000567   .0006031    -0.94   0.348    -.0017545    .0006205
+         v19 |    .001572   .0007845     2.00   0.046     .0000274    .0031165
+         v20 |   .0019692   .0013739     1.43   0.153    -.0007359    .0046743
+         v21 |  -.0009622     .00138    -0.70   0.486    -.0036793    .0017549
+         v22 |  -.0010781   .0002815    -3.83   0.000    -.0016324   -.0005239
+         v23 |  -.0010582   .0005081    -2.08   0.038    -.0020586   -.0000578
+       _cons |   .1319289    .026564     4.97   0.000     .0796273    .1842304
+-------------+----------------------------------------------------------------
+     sigma_u |  .07874923
+     sigma_e |  .01907344
+         rho |  .94458753   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage v9-v23, fe vce(robust)
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.3026                                         min =          1
+     Between = 0.0014                                         avg =        7.9
+     Overall = 0.0064                                         max =          8
+
+                                                F(15, 267)        =      17.01
+corr(u_i, Xb) = -0.3325                         Prob > F          =     0.0000
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+          v9 |   .0014118   .0001598     8.84   0.000     .0010972    .0017264
+         v10 |  -.0018329   .0003859    -4.75   0.000    -.0025926   -.0010732
+         v11 |  -.0016831   .0005361    -3.14   0.002    -.0027386   -.0006275
+         v12 |   .0009758   .0004465     2.19   0.030     .0000967     .001855
+         v13 |  -.0008365    .000423    -1.98   0.049    -.0016694   -3.63e-06
+         v14 |   .0001996   .0005096     0.39   0.696    -.0008037     .001203
+         v15 |   .0010427   .0005571     1.87   0.062    -.0000541    .0021395
+         v16 |  -.0008293   .0003444    -2.41   0.017    -.0015073   -.0001513
+         v17 |   .0016697   .0008734     1.91   0.057      -.00005    .0033894
+         v18 |   -.000718   .0006251    -1.15   0.252    -.0019489    .0005129
+         v19 |   .0018017   .0008092     2.23   0.027     .0002084    .0033949
+         v20 |   .0019813   .0014276     1.39   0.166    -.0008294    .0047921
+         v21 |  -.0011127   .0014113    -0.79   0.431    -.0038914    .0016659
+         v22 |  -.0011533   .0002921    -3.95   0.000    -.0017285   -.0005782
+         v23 |  -.0010067   .0004997    -2.01   0.045    -.0019905   -.0000229
+       _cons |   .1548784   .0252418     6.14   0.000     .1051802    .2045767
+-------------+----------------------------------------------------------------
+     sigma_u |  .08243166
+     sigma_e |  .01957161
+         rho |  .94663603   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage v9-v23 if original_data == 1, fe vce(robust)
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.3469                                         min =          1
+     Between = 0.0000                                         avg =        3.0
+     Overall = 0.0020                                         max =          3
+
+                                                F(15, 267)        =      14.15
+corr(u_i, Xb) = -0.3518                         Prob > F          =     0.0000
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+          v9 |   .0013099   .0001557     8.42   0.000     .0010035    .0016164
+         v10 |  -.0016161   .0003801    -4.25   0.000    -.0023644   -.0008677
+         v11 |  -.0014438   .0005242    -2.75   0.006    -.0024759   -.0004116
+         v12 |   .0010008   .0005179     1.93   0.054     -.000019    .0020205
+         v13 |  -.0006769   .0004256    -1.59   0.113    -.0015149    .0001612
+         v14 |   .0000682   .0004995     0.14   0.892    -.0009153    .0010517
+         v15 |   .0009221   .0005276     1.75   0.082    -.0001168     .001961
+         v16 |   -.000686   .0003693    -1.86   0.064    -.0014131    .0000411
+         v17 |   .0015483   .0007998     1.94   0.054    -.0000265    .0031231
+         v18 |   -.000567   .0006031    -0.94   0.348    -.0017545    .0006205
+         v19 |    .001572   .0007845     2.00   0.046     .0000274    .0031165
+         v20 |   .0019692   .0013739     1.43   0.153    -.0007359    .0046743
+         v21 |  -.0009622     .00138    -0.70   0.486    -.0036793    .0017549
+         v22 |  -.0010781   .0002815    -3.83   0.000    -.0016324   -.0005239
+         v23 |  -.0010582   .0005081    -2.08   0.038    -.0020586   -.0000578
+       _cons |   .1319289    .026564     4.97   0.000     .0796273    .1842304
+-------------+----------------------------------------------------------------
+     sigma_u |  .07874923
+     sigma_e |  .01907344
+         rho |  .94458753   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. 
+. * Log transformation of all travel times
+. foreach var of varlist v9-v23 {
+  2.     gen log_`var' = log(`var' + 1)
+  3. }
+
+. xtreg non_official_lang_percentage log_v9-log_v23, fe
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.3010                                         min =          1
+     Between = 0.0111                                         avg =        7.9
+     Overall = 0.0157                                         max =          8
+
+                                                F(15, 1846)       =      52.99
+corr(u_i, Xb) = -0.5816                         Prob > F          =     0.0000
+
+------------------------------------------------------------------------------
+non_offici~e | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      log_v9 |   .0559974     .00359    15.60   0.000     .0489565    .0630382
+     log_v10 |  -.0529613   .0057868    -9.15   0.000    -.0643106   -.0416119
+     log_v11 |  -.0566273   .0084222    -6.72   0.000    -.0731454   -.0401092
+     log_v12 |   .0205511   .0061845     3.32   0.001     .0084218    .0326805
+     log_v13 |  -.0253374   .0087284    -2.90   0.004    -.0424559   -.0082189
+     log_v14 |   .0154317   .0085919     1.80   0.073    -.0014191    .0322825
+     log_v15 |   .0084203   .0124927     0.67   0.500     -.016081    .0329216
+     log_v16 |  -.0219834   .0064374    -3.41   0.001    -.0346087   -.0093581
+     log_v17 |   .0603852   .0168206     3.59   0.000     .0273958    .0933746
+     log_v18 |  -.0206207   .0116617    -1.77   0.077    -.0434921    .0022507
+     log_v19 |    .047379    .014495     3.27   0.001     .0189506    .0758073
+     log_v20 |   .0467497   .0173927     2.69   0.007     .0126382    .0808612
+     log_v21 |  -.0097482   .0211455    -0.46   0.645    -.0512198    .0317234
+     log_v22 |  -.0436829   .0061161    -7.14   0.000    -.0556781   -.0316876
+     log_v23 |  -.0220847   .0082935    -2.66   0.008    -.0383504    -.005819
+       _cons |   .1414914   .0527671     2.68   0.007     .0380019    .2449809
+-------------+----------------------------------------------------------------
+     sigma_u |  .09507008
+     sigma_e |  .01959425
+         rho |  .95925236   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+F test that all u_i=0: F(267, 1846) = 104.75                 Prob > F = 0.0000
+
+. xtreg non_official_lang_percentage log_v9-log_v23 if original_data == 1, fe
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.3551                                         min =          1
+     Between = 0.0051                                         avg =        3.0
+     Overall = 0.0087                                         max =          3
+
+                                                F(15, 514)        =      18.87
+corr(u_i, Xb) = -0.5988                         Prob > F          =     0.0000
+
+------------------------------------------------------------------------------
+non_offici~e | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      log_v9 |   .0524918   .0057047     9.20   0.000     .0412845    .0636992
+     log_v10 |  -.0464001   .0091068    -5.10   0.000    -.0642912   -.0285089
+     log_v11 |  -.0518439   .0129328    -4.01   0.000    -.0772515   -.0264364
+     log_v12 |   .0226233   .0097928     2.31   0.021     .0033845    .0418621
+     log_v13 |  -.0182024   .0136785    -1.33   0.184     -.045075    .0086703
+     log_v14 |   .0142785   .0134804     1.06   0.290     -.012205     .040762
+     log_v15 |   .0124785   .0194338     0.64   0.521    -.0257009    .0506579
+     log_v16 |  -.0184364   .0102858    -1.79   0.074    -.0386437     .001771
+     log_v17 |   .0482153   .0261829     1.84   0.066    -.0032234    .0996541
+     log_v18 |   -.012826   .0182353    -0.70   0.482     -.048651    .0229989
+     log_v19 |   .0439641   .0226668     1.94   0.053    -.0005668     .088495
+     log_v20 |   .0450843   .0268413     1.68   0.094    -.0076478    .0978163
+     log_v21 |  -.0072608    .032786    -0.22   0.825    -.0716719    .0571503
+     log_v22 |  -.0423066   .0097357    -4.35   0.000    -.0614333   -.0231799
+     log_v23 |   -.024884   .0131355    -1.89   0.059    -.0506899    .0009218
+       _cons |   .0796598    .083244     0.96   0.339    -.0838805       .2432
+-------------+----------------------------------------------------------------
+     sigma_u |  .09168411
+     sigma_e |  .01895284
+         rho |  .95901853   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+F test that all u_i=0: F(267, 514) = 37.40                   Prob > F = 0.0000
+
+. xtreg non_official_lang_percentage log_v9-log_v23, fe vce(robust)
+
+Fixed-effects (within) regression               Number of obs     =      2,129
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.3010                                         min =          1
+     Between = 0.0111                                         avg =        7.9
+     Overall = 0.0157                                         max =          8
+
+                                                F(15, 267)        =      18.60
+corr(u_i, Xb) = -0.5816                         Prob > F          =     0.0000
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      log_v9 |   .0559974    .006807     8.23   0.000     .0425951    .0693996
+     log_v10 |  -.0529613    .010462    -5.06   0.000    -.0735597   -.0323628
+     log_v11 |  -.0566273   .0152514    -3.71   0.000    -.0866556    -.026599
+     log_v12 |   .0205511   .0121596     1.69   0.092    -.0033897     .044492
+     log_v13 |  -.0253374   .0145628    -1.74   0.083      -.05401    .0033353
+     log_v14 |   .0154317   .0137106     1.13   0.261    -.0115629    .0424263
+     log_v15 |   .0084203   .0169159     0.50   0.619    -.0248852    .0417259
+     log_v16 |  -.0219834   .0115443    -1.90   0.058    -.0447129    .0007461
+     log_v17 |   .0603852   .0247415     2.44   0.015      .011672    .1090984
+     log_v18 |  -.0206207   .0177801    -1.16   0.247    -.0556278    .0143864
+     log_v19 |    .047379   .0187853     2.52   0.012     .0103928    .0843651
+     log_v20 |   .0467497     .02775     1.68   0.093    -.0078869    .1013863
+     log_v21 |  -.0097482   .0352204    -0.28   0.782    -.0790933    .0595968
+     log_v22 |  -.0436829   .0098083    -4.45   0.000    -.0629943   -.0243714
+     log_v23 |  -.0220847   .0142437    -1.55   0.122     -.050129    .0059596
+       _cons |   .1414914   .0932277     1.52   0.130    -.0420635    .3250463
+-------------+----------------------------------------------------------------
+     sigma_u |  .09507008
+     sigma_e |  .01959425
+         rho |  .95925236   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. xtreg non_official_lang_percentage log_v9-log_v23 if original_data == 1, fe vce(cluster district_id)
+
+Fixed-effects (within) regression               Number of obs     =        797
+Group variable: district_id                     Number of groups  =        268
+
+R-squared:                                      Obs per group:
+     Within  = 0.3551                                         min =          1
+     Between = 0.0051                                         avg =        3.0
+     Overall = 0.0087                                         max =          3
+
+                                                F(15, 267)        =      15.71
+corr(u_i, Xb) = -0.5988                         Prob > F          =     0.0000
+
+                          (Std. err. adjusted for 268 clusters in district_id)
+------------------------------------------------------------------------------
+             |               Robust
+non_offici~e | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      log_v9 |   .0524918   .0066438     7.90   0.000     .0394109    .0655728
+     log_v10 |  -.0464001   .0099736    -4.65   0.000    -.0660371   -.0267631
+     log_v11 |  -.0518439   .0145966    -3.55   0.000     -.080583   -.0231049
+     log_v12 |   .0226233    .014444     1.57   0.118    -.0058154    .0510619
+     log_v13 |  -.0182024   .0141791    -1.28   0.200    -.0461195    .0097148
+     log_v14 |   .0142785   .0129392     1.10   0.271    -.0111973    .0397543
+     log_v15 |   .0124785   .0162635     0.77   0.444    -.0195425    .0444995
+     log_v16 |  -.0184364   .0117447    -1.57   0.118    -.0415605    .0046877
+     log_v17 |   .0482153   .0226081     2.13   0.034     .0037026    .0927281
+     log_v18 |   -.012826   .0172263    -0.74   0.457    -.0467427    .0210906
+     log_v19 |   .0439641   .0178144     2.47   0.014     .0088895    .0790387
+     log_v20 |   .0450843   .0258814     1.74   0.083    -.0058733    .0960418
+     log_v21 |  -.0072608   .0330094    -0.22   0.826    -.0722526     .057731
+     log_v22 |  -.0423066   .0101194    -4.18   0.000    -.0622305   -.0223827
+     log_v23 |   -.024884   .0141045    -1.76   0.079    -.0526543    .0028862
+       _cons |   .0796598   .0906369     0.88   0.380    -.0987942    .2581137
+-------------+----------------------------------------------------------------
+     sigma_u |  .09168411
+     sigma_e |  .01895284
+         rho |  .95901853   (fraction of variance due to u_i)
+------------------------------------------------------------------------------

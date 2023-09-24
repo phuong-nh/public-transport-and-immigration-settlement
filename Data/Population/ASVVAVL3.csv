@@ -1,0 +1,283 @@
+"Vantaan väestö äidinkielen ja iän mukaan 31.12."
+
+"Alue","Äidinkieli","Ikä","2013","2014","2015","2016","2017","2018","2019","2020"
+"092 Vantaa","Kaikki äidinkielet","Väestö yhteensä",208098,210803,214605,219341,223027,228166,233775,237231
+"092 Vantaa","Suomi ja saame","Väestö yhteensä",174861,174837,175844,177263,178045,179478,180924,180492
+"092 Vantaa","Ruotsi","Väestö yhteensä",5722,5704,5676,5631,5594,5559,5575,5579
+"092 Vantaa","Muu kieli","Väestö yhteensä",27515,30262,33085,36447,39388,43129,47276,51160
+"092 1 Myyrmäen suuralue","Kaikki äidinkielet","Väestö yhteensä",52267,52951,53902,55027,55865,56745,57700,58380
+"092 1 Myyrmäen suuralue","Suomi ja saame","Väestö yhteensä",44036,43777,43897,44113,44156,44274,44234,43917
+"092 1 Myyrmäen suuralue","Ruotsi","Väestö yhteensä",1647,1653,1672,1641,1635,1602,1568,1573
+"092 1 Myyrmäen suuralue","Muu kieli","Väestö yhteensä",6584,7521,8333,9273,10074,10869,11898,12890
+"092 10 Linnainen","Kaikki äidinkielet","Väestö yhteensä",813,795,791,786,776,771,748,751
+"092 10 Linnainen","Suomi ja saame","Väestö yhteensä",777,756,747,744,739,728,701,696
+"092 10 Linnainen","Ruotsi","Väestö yhteensä",17,17,18,18,15,15,16,18
+"092 10 Linnainen","Muu kieli","Väestö yhteensä",19,22,26,24,22,28,31,37
+"092 11 Hämevaara","Kaikki äidinkielet","Väestö yhteensä",1327,1343,1604,1629,1601,1643,1641,1643
+"092 11 Hämevaara","Suomi ja saame","Väestö yhteensä",1244,1244,1448,1462,1433,1451,1446,1442
+"092 11 Hämevaara","Ruotsi","Väestö yhteensä",24,26,28,29,28,35,38,38
+"092 11 Hämevaara","Muu kieli","Väestö yhteensä",59,73,128,138,140,157,157,163
+"092 12 Hämeenkylä","Kaikki äidinkielet","Väestö yhteensä",7418,7587,8066,8086,8111,8137,8250,8433
+"092 12 Hämeenkylä","Suomi ja saame","Väestö yhteensä",6431,6499,6767,6706,6711,6676,6698,6751
+"092 12 Hämeenkylä","Ruotsi","Väestö yhteensä",195,201,209,196,193,180,159,165
+"092 12 Hämeenkylä","Muu kieli","Väestö yhteensä",792,887,1090,1184,1207,1281,1393,1517
+"092 13 Vapaala","Kaikki äidinkielet","Väestö yhteensä",3922,3948,3914,3981,4036,4001,4015,3993
+"092 13 Vapaala","Suomi ja saame","Väestö yhteensä",3479,3460,3413,3423,3423,3386,3348,3315
+"092 13 Vapaala","Ruotsi","Väestö yhteensä",141,154,156,150,145,142,143,138
+"092 13 Vapaala","Muu kieli","Väestö yhteensä",302,334,345,408,468,473,524,540
+"092 14 Varisto","Kaikki äidinkielet","Väestö yhteensä",2447,2440,2396,2402,2378,2389,2387,2288
+"092 14 Varisto","Suomi ja saame","Väestö yhteensä",2101,2068,2017,1995,1920,1903,1900,1814
+"092 14 Varisto","Ruotsi","Väestö yhteensä",71,64,68,68,72,71,77,70
+"092 14 Varisto","Muu kieli","Väestö yhteensä",275,308,311,339,386,415,410,404
+"092 15 Myyrmäki","Kaikki äidinkielet","Väestö yhteensä",15658,15884,15890,16453,16850,17194,17275,17234
+"092 15 Myyrmäki","Suomi ja saame","Väestö yhteensä",12896,12735,12556,12665,12681,12712,12466,12170
+"092 15 Myyrmäki","Ruotsi","Väestö yhteensä",371,372,374,358,370,355,363,359
+"092 15 Myyrmäki","Muu kieli","Väestö yhteensä",2391,2777,2960,3430,3799,4127,4446,4705
+"092 16 Kaivoksela","Kaikki äidinkielet","Väestö yhteensä",4053,4300,4681,5040,5133,5314,5706,5920
+"092 16 Kaivoksela","Suomi ja saame","Väestö yhteensä",3398,3564,3763,4032,4089,4180,4403,4525
+"092 16 Kaivoksela","Ruotsi","Väestö yhteensä",164,173,181,188,199,196,195,199
+"092 16 Kaivoksela","Muu kieli","Väestö yhteensä",491,563,737,820,845,938,1108,1196
+"092 17 Martinlaakso","Kaikki äidinkielet","Väestö yhteensä",11811,11847,11778,11752,12050,12347,12747,13165
+"092 17 Martinlaakso","Suomi ja saame","Väestö yhteensä",9387,9161,8929,8734,8790,8894,8986,9003
+"092 17 Martinlaakso","Ruotsi","Väestö yhteensä",467,455,455,453,443,430,419,422
+"092 17 Martinlaakso","Muu kieli","Väestö yhteensä",1957,2231,2394,2565,2817,3023,3342,3740
+"092 18 Vantaanlaakso","Kaikki äidinkielet","Väestö yhteensä",2725,2738,2703,2772,2811,2842,2850,2880
+"092 18 Vantaanlaakso","Suomi ja saame","Väestö yhteensä",2447,2442,2394,2443,2475,2467,2459,2449
+"092 18 Vantaanlaakso","Ruotsi","Väestö yhteensä",146,145,139,132,125,131,117,121
+"092 18 Vantaanlaakso","Muu kieli","Väestö yhteensä",132,151,170,197,211,244,274,310
+"092 20 Askisto","Kaikki äidinkielet","Väestö yhteensä",1796,1783,1789,1838,1833,1817,1791,1791
+"092 20 Askisto","Suomi ja saame","Väestö yhteensä",1608,1588,1602,1648,1639,1619,1580,1512
+"092 20 Askisto","Ruotsi","Väestö yhteensä",45,40,38,44,39,38,33,35
+"092 20 Askisto","Muu kieli","Väestö yhteensä",143,155,149,146,155,160,178,244
+"092 26 Petikko","Kaikki äidinkielet","Väestö yhteensä",297,286,290,288,286,290,290,282
+"092 26 Petikko","Suomi ja saame","Väestö yhteensä",268,260,261,261,256,258,247,240
+"092 26 Petikko","Ruotsi","Väestö yhteensä",6,6,6,5,6,9,8,8
+"092 26 Petikko","Muu kieli","Väestö yhteensä",23,20,23,22,24,23,35,34
+"092 2 Kivistön suuralue","Kaikki äidinkielet","Väestö yhteensä",8560,8899,10074,11722,12559,13675,15363,16875
+"092 2 Kivistön suuralue","Suomi ja saame","Väestö yhteensä",7759,8044,9060,10413,11071,11963,13128,14004
+"092 2 Kivistön suuralue","Ruotsi","Väestö yhteensä",412,422,416,440,439,438,469,496
+"092 2 Kivistön suuralue","Muu kieli","Väestö yhteensä",389,433,598,869,1049,1274,1766,2375
+"092 21 Piispankylä","Kaikki äidinkielet","Väestö yhteensä",853,826,805,803,815,816,811,779
+"092 21 Piispankylä","Suomi ja saame","Väestö yhteensä",741,708,687,686,679,677,680,638
+"092 21 Piispankylä","Ruotsi","Väestö yhteensä",32,39,32,28,28,19,23,24
+"092 21 Piispankylä","Muu kieli","Väestö yhteensä",80,79,86,89,108,120,108,117
+"092 22 Keimola","Kaikki äidinkielet","Väestö yhteensä",162,185,183,903,1011,1200,1522,1649
+"092 22 Keimola","Suomi ja saame","Väestö yhteensä",129,144,142,752,834,980,1190,1212
+"092 22 Keimola","Ruotsi","Väestö yhteensä",26,28,26,42,42,34,40,38
+"092 22 Keimola","Muu kieli","Väestö yhteensä",7,13,15,109,135,186,292,399
+"092 23 Kivistö","Kaikki äidinkielet","Väestö yhteensä",3452,3711,4960,5894,6549,7505,8909,10368
+"092 23 Kivistö","Suomi ja saame","Väestö yhteensä",3235,3477,4583,5366,5926,6714,7700,8633
+"092 23 Kivistö","Ruotsi","Väestö yhteensä",112,119,134,145,148,171,194,224
+"092 23 Kivistö","Muu kieli","Väestö yhteensä",105,115,243,383,475,620,1015,1511
+"092 24 Lapinkylä","Kaikki äidinkielet","Väestö yhteensä",1174,1212,1215,1220,1291,1343,1353,1359
+"092 24 Lapinkylä","Suomi ja saame","Väestö yhteensä",1076,1106,1101,1103,1160,1211,1219,1226
+"092 24 Lapinkylä","Ruotsi","Väestö yhteensä",41,39,43,44,44,39,43,44
+"092 24 Lapinkylä","Muu kieli","Väestö yhteensä",57,67,71,73,87,93,91,89
+"092 25 Myllymäki","Kaikki äidinkielet","Väestö yhteensä",281,284,280,270,282,260,255,246
+"092 25 Myllymäki","Suomi ja saame","Väestö yhteensä",260,257,255,244,255,238,229,212
+"092 25 Myllymäki","Ruotsi","Väestö yhteensä",12,16,12,13,12,10,10,10
+"092 25 Myllymäki","Muu kieli","Väestö yhteensä",9,11,13,13,15,12,16,24
+"092 30 Vestra","Kaikki äidinkielet","Väestö yhteensä",378,367,354,353,349,343,341,343
+"092 30 Vestra","Suomi ja saame","Väestö yhteensä",321,311,308,304,300,296,294,296
+"092 30 Vestra","Ruotsi","Väestö yhteensä",44,41,34,32,31,31,32,29
+"092 30 Vestra","Muu kieli","Väestö yhteensä",13,15,12,17,18,16,15,18
+"092 31 Luhtaanmäki","Kaikki äidinkielet","Väestö yhteensä",283,291,288,295,292,286,279,276
+"092 31 Luhtaanmäki","Suomi ja saame","Väestö yhteensä",240,248,246,251,243,239,237,230
+"092 31 Luhtaanmäki","Ruotsi","Väestö yhteensä",39,37,33,34,33,33,30,29
+"092 31 Luhtaanmäki","Muu kieli","Väestö yhteensä",4,6,9,10,16,14,12,17
+"092 32 Riipilä","Kaikki äidinkielet","Väestö yhteensä",679,701,705,690,698,692,694,689
+"092 32 Riipilä","Suomi ja saame","Väestö yhteensä",626,648,651,630,628,610,604,605
+"092 32 Riipilä","Ruotsi","Väestö yhteensä",26,24,23,26,28,29,27,29
+"092 32 Riipilä","Muu kieli","Väestö yhteensä",27,29,31,34,42,53,63,55
+"092 33 Seutula","Kaikki äidinkielet","Väestö yhteensä",872,900,878,880,847,822,799,777
+"092 33 Seutula","Suomi ja saame","Väestö yhteensä",756,780,741,728,689,662,649,638
+"092 33 Seutula","Ruotsi","Väestö yhteensä",52,49,49,46,44,44,44,41
+"092 33 Seutula","Muu kieli","Väestö yhteensä",64,71,88,106,114,116,106,98
+"092 34 Kiila","Kaikki äidinkielet","Väestö yhteensä",426,422,406,414,425,408,400,389
+"092 34 Kiila","Suomi ja saame","Väestö yhteensä",375,365,346,349,357,336,326,314
+"092 34 Kiila","Ruotsi","Väestö yhteensä",28,30,30,30,29,28,26,28
+"092 34 Kiila","Muu kieli","Väestö yhteensä",23,27,30,35,39,44,48,47
+"092 3 Aviapoliksen suuralue","Kaikki äidinkielet","Väestö yhteensä",18327,18849,18829,19055,19143,19382,19883,20023
+"092 3 Aviapoliksen suuralue","Suomi ja saame","Väestö yhteensä",15815,16070,15923,15889,15863,15953,16157,16117
+"092 3 Aviapoliksen suuralue","Ruotsi","Väestö yhteensä",565,534,518,522,535,513,536,534
+"092 3 Aviapoliksen suuralue","Muu kieli","Väestö yhteensä",1947,2245,2388,2644,2745,2916,3190,3372
+"092 40 Ylästö","Kaikki äidinkielet","Väestö yhteensä",4799,4759,4753,4777,4915,4948,5106,5117
+"092 40 Ylästö","Suomi ja saame","Väestö yhteensä",4345,4311,4280,4285,4390,4396,4525,4542
+"092 40 Ylästö","Ruotsi","Väestö yhteensä",241,228,233,238,239,227,234,232
+"092 40 Ylästö","Muu kieli","Väestö yhteensä",213,220,240,254,286,325,347,343
+"092 41 Viinikkala","Kaikki äidinkielet","Väestö yhteensä",87,79,71,72,71,73,67,73
+"092 41 Viinikkala","Suomi ja saame","Väestö yhteensä",67,62,56,55,51,54,49,49
+"092 41 Viinikkala","Ruotsi","Väestö yhteensä",11,9,8,10,10,11,11,10
+"092 41 Viinikkala","Muu kieli","Väestö yhteensä",9,8,7,7,10,8,7,14
+"092 50 Tammisto","Kaikki äidinkielet","Väestö yhteensä",3392,3456,3458,3469,3453,3474,3440,3446
+"092 50 Tammisto","Suomi ja saame","Väestö yhteensä",2983,3019,3027,2997,2964,2988,2950,2968
+"092 50 Tammisto","Ruotsi","Väestö yhteensä",92,86,83,76,75,76,70,73
+"092 50 Tammisto","Muu kieli","Väestö yhteensä",317,351,348,396,414,410,420,405
+"092 51 Pakkala","Kaikki äidinkielet","Väestö yhteensä",9509,9981,10013,10243,10275,10249,10402,10299
+"092 51 Pakkala","Suomi ja saame","Väestö yhteensä",8012,8272,8196,8263,8206,8122,8105,7910
+"092 51 Pakkala","Ruotsi","Väestö yhteensä",209,200,183,190,201,184,204,196
+"092 51 Pakkala","Muu kieli","Väestö yhteensä",1288,1509,1634,1790,1868,1943,2093,2193
+"092 52 Veromies","Kaikki äidinkielet","Väestö yhteensä",528,562,523,485,420,630,860,1078
+"092 52 Veromies","Suomi ja saame","Väestö yhteensä",405,403,362,287,250,391,526,646
+"092 52 Veromies","Ruotsi","Väestö yhteensä",12,11,11,8,10,15,17,23
+"092 52 Veromies","Muu kieli","Väestö yhteensä",111,148,150,190,160,224,317,409
+"092 53 Lentokenttä","Kaikki äidinkielet","Väestö yhteensä",12,12,11,9,9,8,8,10
+"092 53 Lentokenttä","Suomi ja saame","Väestö yhteensä",..,..,..,..,..,..,..,..
+"092 53 Lentokenttä","Ruotsi","Väestö yhteensä",..,..,..,..,..,..,..,..
+"092 53 Lentokenttä","Muu kieli","Väestö yhteensä",..,..,..,..,..,..,..,..
+"092 4 Tikkurilan suuralue","Kaikki äidinkielet","Väestö yhteensä",39473,40094,41530,41998,43026,44311,45272,46210
+"092 4 Tikkurilan suuralue","Suomi ja saame","Väestö yhteensä",34177,34288,35062,35166,35602,36113,36463,36796
+"092 4 Tikkurilan suuralue","Ruotsi","Väestö yhteensä",1183,1183,1212,1181,1177,1215,1223,1244
+"092 4 Tikkurilan suuralue","Muu kieli","Väestö yhteensä",4113,4623,5256,5651,6247,6983,7586,8170
+"092 60 Hiekkaharju","Kaikki äidinkielet","Väestö yhteensä",4930,5001,5071,5008,5345,5348,5381,5410
+"092 60 Hiekkaharju","Suomi ja saame","Väestö yhteensä",4467,4528,4580,4490,4708,4669,4668,4641
+"092 60 Hiekkaharju","Ruotsi","Väestö yhteensä",139,139,141,135,142,141,146,162
+"092 60 Hiekkaharju","Muu kieli","Väestö yhteensä",324,334,350,383,495,538,567,607
+"092 61 Tikkurila","Kaikki äidinkielet","Väestö yhteensä",5211,5373,5659,5853,6074,6519,7003,7297
+"092 61 Tikkurila","Suomi ja saame","Väestö yhteensä",4285,4342,4513,4632,4778,5091,5462,5627
+"092 61 Tikkurila","Ruotsi","Väestö yhteensä",131,130,143,134,127,145,170,161
+"092 61 Tikkurila","Muu kieli","Väestö yhteensä",795,901,1003,1087,1169,1283,1371,1509
+"092 62 Jokiniemi","Kaikki äidinkielet","Väestö yhteensä",4984,5028,5639,5781,5760,5778,5824,6110
+"092 62 Jokiniemi","Suomi ja saame","Väestö yhteensä",3992,3959,4425,4530,4462,4323,4270,4407
+"092 62 Jokiniemi","Ruotsi","Väestö yhteensä",169,169,181,177,168,191,175,176
+"092 62 Jokiniemi","Muu kieli","Väestö yhteensä",823,900,1033,1074,1130,1264,1379,1527
+"092 63 Viertola","Kaikki äidinkielet","Väestö yhteensä",6159,6267,6269,6393,6813,7358,7535,7700
+"092 63 Viertola","Suomi ja saame","Väestö yhteensä",5546,5558,5508,5588,5908,6331,6388,6476
+"092 63 Viertola","Ruotsi","Väestö yhteensä",190,181,176,172,173,188,182,195
+"092 63 Viertola","Muu kieli","Väestö yhteensä",423,528,585,633,732,839,965,1029
+"092 64 Kuninkaala","Kaikki äidinkielet","Väestö yhteensä",2853,2842,2827,2855,2814,2856,2849,2888
+"092 64 Kuninkaala","Suomi ja saame","Väestö yhteensä",2480,2419,2383,2355,2290,2270,2256,2252
+"092 64 Kuninkaala","Ruotsi","Väestö yhteensä",136,127,131,119,119,117,108,119
+"092 64 Kuninkaala","Muu kieli","Väestö yhteensä",237,296,313,381,405,469,485,517
+"092 65 Simonkylä","Kaikki äidinkielet","Väestö yhteensä",7591,7798,8073,8180,8134,8123,8115,8123
+"092 65 Simonkylä","Suomi ja saame","Väestö yhteensä",6505,6587,6688,6682,6573,6406,6260,6164
+"092 65 Simonkylä","Ruotsi","Väestö yhteensä",157,162,161,157,150,140,140,141
+"092 65 Simonkylä","Muu kieli","Väestö yhteensä",929,1049,1224,1341,1411,1577,1715,1818
+"092 66 Hakkila","Kaikki äidinkielet","Väestö yhteensä",1373,1381,1397,1361,1377,1367,1342,1318
+"092 66 Hakkila","Suomi ja saame","Väestö yhteensä",1239,1230,1198,1168,1168,1142,1106,1060
+"092 66 Hakkila","Ruotsi","Väestö yhteensä",59,61,67,71,78,71,73,78
+"092 66 Hakkila","Muu kieli","Väestö yhteensä",75,90,132,122,131,154,163,180
+"092 67 Ruskeasanta","Kaikki äidinkielet","Väestö yhteensä",4265,4230,4197,4131,4119,4170,4188,4163
+"092 67 Ruskeasanta","Suomi ja saame","Väestö yhteensä",3902,3866,3815,3749,3696,3714,3684,3655
+"092 67 Ruskeasanta","Ruotsi","Väestö yhteensä",102,99,102,102,106,116,116,102
+"092 67 Ruskeasanta","Muu kieli","Väestö yhteensä",261,265,280,280,317,340,388,406
+"092 68 Koivuhaka","Kaikki äidinkielet","Väestö yhteensä",1960,2024,2246,2286,2445,2655,2896,3069
+"092 68 Koivuhaka","Suomi ja saame","Väestö yhteensä",1650,1688,1838,1859,1909,2063,2262,2414
+"092 68 Koivuhaka","Ruotsi","Väestö yhteensä",70,83,78,82,83,80,86,83
+"092 68 Koivuhaka","Muu kieli","Väestö yhteensä",240,253,330,345,453,512,548,572
+"092 69 Helsingin pitäjän kk.","Kaikki äidinkielet","Väestö yhteensä",147,150,152,150,145,137,139,132
+"092 69 Helsingin pitäjän kk.","Suomi ja saame","Väestö yhteensä",111,111,114,113,110,104,107,100
+"092 69 Helsingin pitäjän kk.","Ruotsi","Väestö yhteensä",30,32,32,32,31,26,27,27
+"092 69 Helsingin pitäjän kk.","Muu kieli","Väestö yhteensä",6,7,6,5,4,7,5,5
+"092 5 Koivukylän suuralue","Kaikki äidinkielet","Väestö yhteensä",26772,27068,27272,28062,28825,29622,30208,30319
+"092 5 Koivukylän suuralue","Suomi ja saame","Väestö yhteensä",22074,22083,21964,22214,22479,22607,22574,22200
+"092 5 Koivukylän suuralue","Ruotsi","Väestö yhteensä",510,513,492,489,492,496,483,475
+"092 5 Koivukylän suuralue","Muu kieli","Väestö yhteensä",4188,4472,4816,5359,5854,6519,7151,7644
+"092 70 Koivukylä","Kaikki äidinkielet","Väestö yhteensä",3263,3435,3392,4075,4463,4836,5002,5154
+"092 70 Koivukylä","Suomi ja saame","Väestö yhteensä",2769,2870,2831,3387,3665,3887,3926,3951
+"092 70 Koivukylä","Ruotsi","Väestö yhteensä",96,97,82,88,92,97,102,100
+"092 70 Koivukylä","Muu kieli","Väestö yhteensä",398,468,479,600,706,852,974,1103
+"092 71 Ilola","Kaikki äidinkielet","Väestö yhteensä",4578,4667,4760,4796,4927,4989,5034,5011
+"092 71 Ilola","Suomi ja saame","Väestö yhteensä",4155,4221,4295,4277,4329,4322,4343,4253
+"092 71 Ilola","Ruotsi","Väestö yhteensä",95,105,110,110,107,113,98,106
+"092 71 Ilola","Muu kieli","Väestö yhteensä",328,341,355,409,491,554,593,652
+"092 72 Asola","Kaikki äidinkielet","Väestö yhteensä",3843,3953,4003,4078,4381,4671,4867,4931
+"092 72 Asola","Suomi ja saame","Väestö yhteensä",3073,3123,3153,3142,3376,3526,3646,3667
+"092 72 Asola","Ruotsi","Väestö yhteensä",70,78,71,69,68,68,70,65
+"092 72 Asola","Muu kieli","Väestö yhteensä",700,752,779,867,937,1077,1151,1199
+"092 73 Rekola","Kaikki äidinkielet","Väestö yhteensä",2867,2854,2893,2915,2943,2967,2980,2959
+"092 73 Rekola","Suomi ja saame","Väestö yhteensä",2663,2624,2623,2626,2626,2644,2589,2569
+"092 73 Rekola","Ruotsi","Väestö yhteensä",53,51,49,45,40,34,35,34
+"092 73 Rekola","Muu kieli","Väestö yhteensä",151,179,221,244,277,289,356,356
+"092 74 Havukoski","Kaikki äidinkielet","Väestö yhteensä",8156,8141,8195,8163,8057,8118,8352,8341
+"092 74 Havukoski","Suomi ja saame","Väestö yhteensä",5699,5587,5433,5221,4914,4714,4597,4382
+"092 74 Havukoski","Ruotsi","Väestö yhteensä",125,112,113,112,114,117,119,112
+"092 74 Havukoski","Muu kieli","Väestö yhteensä",2332,2442,2649,2830,3029,3287,3636,3847
+"092 75 Päiväkumpu","Kaikki äidinkielet","Väestö yhteensä",4065,4018,4029,4035,4054,4041,3973,3923
+"092 75 Päiväkumpu","Suomi ja saame","Väestö yhteensä",3715,3658,3629,3561,3569,3514,3473,3378
+"092 75 Päiväkumpu","Ruotsi","Väestö yhteensä",71,70,67,65,71,67,59,58
+"092 75 Päiväkumpu","Muu kieli","Väestö yhteensä",279,290,333,409,414,460,441,487
+"092 6 Korson suuralue","Kaikki äidinkielet","Väestö yhteensä",29765,29852,29573,29661,29727,29819,30037,30036
+"092 6 Korson suuralue","Suomi ja saame","Väestö yhteensä",25612,25497,25195,25039,24780,24508,24473,24111
+"092 6 Korson suuralue","Ruotsi","Väestö yhteensä",481,491,469,490,458,459,449,436
+"092 6 Korson suuralue","Muu kieli","Väestö yhteensä",3672,3864,3909,4132,4489,4852,5115,5489
+"092 80 Matari","Kaikki äidinkielet","Väestö yhteensä",2229,2276,2312,2307,2259,2273,2290,2321
+"092 80 Matari","Suomi ja saame","Väestö yhteensä",2102,2129,2139,2124,2051,2025,2004,1994
+"092 80 Matari","Ruotsi","Väestö yhteensä",43,41,36,39,34,33,36,36
+"092 80 Matari","Muu kieli","Väestö yhteensä",84,106,137,144,174,215,250,291
+"092 81 Korso","Kaikki äidinkielet","Väestö yhteensä",7402,7356,7378,7347,7226,7255,7460,7403
+"092 81 Korso","Suomi ja saame","Väestö yhteensä",6294,6203,6125,5995,5810,5733,5879,5731
+"092 81 Korso","Ruotsi","Väestö yhteensä",104,110,106,107,100,108,111,104
+"092 81 Korso","Muu kieli","Väestö yhteensä",1004,1043,1147,1245,1316,1414,1470,1568
+"092 82 Mikkola","Kaikki äidinkielet","Väestö yhteensä",3311,3280,2956,3009,3091,3127,3076,3094
+"092 82 Mikkola","Suomi ja saame","Väestö yhteensä",2319,2229,2079,2081,2128,2098,2063,2022
+"092 82 Mikkola","Ruotsi","Väestö yhteensä",40,38,37,32,34,34,31,32
+"092 82 Mikkola","Muu kieli","Väestö yhteensä",952,1013,840,896,929,995,982,1040
+"092 83 Metsola","Kaikki äidinkielet","Väestö yhteensä",6277,6322,6291,6260,6262,6197,6210,6111
+"092 83 Metsola","Suomi ja saame","Väestö yhteensä",5163,5163,5138,5080,4991,4874,4794,4605
+"092 83 Metsola","Ruotsi","Väestö yhteensä",87,82,78,89,87,76,81,73
+"092 83 Metsola","Muu kieli","Väestö yhteensä",1027,1077,1075,1091,1184,1247,1335,1433
+"092 84 Leppäkorpi","Kaikki äidinkielet","Väestö yhteensä",2445,2461,2502,2512,2498,2472,2459,2480
+"092 84 Leppäkorpi","Suomi ja saame","Väestö yhteensä",2307,2314,2339,2325,2305,2267,2241,2256
+"092 84 Leppäkorpi","Ruotsi","Väestö yhteensä",30,37,38,36,35,36,27,22
+"092 84 Leppäkorpi","Muu kieli","Väestö yhteensä",108,110,125,151,158,169,191,202
+"092 85 Jokivarsi","Kaikki äidinkielet","Väestö yhteensä",1315,1338,1332,1350,1346,1342,1346,1356
+"092 85 Jokivarsi","Suomi ja saame","Väestö yhteensä",1235,1251,1242,1252,1232,1226,1216,1191
+"092 85 Jokivarsi","Ruotsi","Väestö yhteensä",41,42,37,44,37,38,33,38
+"092 85 Jokivarsi","Muu kieli","Väestö yhteensä",39,45,53,54,77,78,97,127
+"092 86 Nikinmäki","Kaikki äidinkielet","Väestö yhteensä",3594,3637,3644,3742,3880,3972,4051,4216
+"092 86 Nikinmäki","Suomi ja saame","Väestö yhteensä",3330,3364,3352,3427,3524,3566,3596,3712
+"092 86 Nikinmäki","Ruotsi","Väestö yhteensä",86,88,85,94,88,91,90,94
+"092 86 Nikinmäki","Muu kieli","Väestö yhteensä",178,185,207,221,268,315,365,410
+"092 87 Vierumäki","Kaikki äidinkielet","Väestö yhteensä",1428,1404,1426,1441,1429,1443,1435,1411
+"092 87 Vierumäki","Suomi ja saame","Väestö yhteensä",1297,1283,1284,1290,1264,1247,1235,1208
+"092 87 Vierumäki","Ruotsi","Väestö yhteensä",20,22,20,18,17,16,17,15
+"092 87 Vierumäki","Muu kieli","Väestö yhteensä",111,99,122,133,148,180,183,188
+"092 88 Vallinoja","Kaikki äidinkielet","Väestö yhteensä",1764,1778,1732,1693,1736,1738,1710,1644
+"092 88 Vallinoja","Suomi ja saame","Väestö yhteensä",1565,1561,1497,1465,1475,1472,1445,1392
+"092 88 Vallinoja","Ruotsi","Väestö yhteensä",30,31,32,31,26,27,23,22
+"092 88 Vallinoja","Muu kieli","Väestö yhteensä",169,186,203,197,235,239,242,230
+"092 7 Hakunilan suuralue","Kaikki äidinkielet","Väestö yhteensä",29214,29092,29311,29510,29462,29782,30525,30571
+"092 7 Hakunilan suuralue","Suomi ja saame","Väestö yhteensä",22541,22096,21803,21504,21209,21064,20977,20497
+"092 7 Hakunilan suuralue","Ruotsi","Väestö yhteensä",832,813,794,761,747,723,729,711
+"092 7 Hakunilan suuralue","Muu kieli","Väestö yhteensä",5841,6183,6714,7245,7506,7995,8819,9363
+"092 90 Länsisalmi","Kaikki äidinkielet","Väestö yhteensä",36,32,34,32,33,34,30,30
+"092 90 Länsisalmi","Suomi ja saame","Väestö yhteensä",..,..,..,..,..,..,..,..
+"092 90 Länsisalmi","Ruotsi","Väestö yhteensä",..,..,..,..,..,..,..,..
+"092 90 Länsisalmi","Muu kieli","Väestö yhteensä",..,..,..,..,..,..,..,..
+"092 91 Länsimäki","Kaikki äidinkielet","Väestö yhteensä",5675,5539,5630,5665,5574,5613,5693,5754
+"092 91 Länsimäki","Suomi ja saame","Väestö yhteensä",3765,3622,3567,3463,3310,3222,3154,3028
+"092 91 Länsimäki","Ruotsi","Väestö yhteensä",95,97,86,80,79,69,68,62
+"092 91 Länsimäki","Muu kieli","Väestö yhteensä",1815,1820,1977,2122,2185,2322,2471,2664
+"092 92 Ojanko","Kaikki äidinkielet","Väestö yhteensä",69,70,65,71,75,78,73,75
+"092 92 Ojanko","Suomi ja saame","Väestö yhteensä",..,..,..,..,..,..,..,..
+"092 92 Ojanko","Ruotsi","Väestö yhteensä",..,..,..,..,..,..,..,..
+"092 92 Ojanko","Muu kieli","Väestö yhteensä",..,..,..,..,..,..,..,..
+"092 93 Vaarala","Kaikki äidinkielet","Väestö yhteensä",2917,2908,2966,2931,2982,2972,2982,3001
+"092 93 Vaarala","Suomi ja saame","Väestö yhteensä",2482,2472,2471,2426,2462,2439,2396,2400
+"092 93 Vaarala","Ruotsi","Väestö yhteensä",119,104,107,93,92,97,96,94
+"092 93 Vaarala","Muu kieli","Väestö yhteensä",316,332,388,412,428,436,490,507
+"092 94 Hakunila","Kaikki äidinkielet","Väestö yhteensä",11238,11253,11309,11318,11258,11489,12099,12132
+"092 94 Hakunila","Suomi ja saame","Väestö yhteensä",7976,7744,7505,7285,7102,7108,7195,6967
+"092 94 Hakunila","Ruotsi","Väestö yhteensä",230,220,230,211,211,203,208,198
+"092 94 Hakunila","Muu kieli","Väestö yhteensä",3032,3289,3574,3822,3945,4178,4696,4967
+"092 95 Rajakylä","Kaikki äidinkielet","Väestö yhteensä",3852,3869,3840,4027,4045,4085,4155,4153
+"092 95 Rajakylä","Suomi ja saame","Väestö yhteensä",3419,3394,3370,3468,3442,3408,3407,3362
+"092 95 Rajakylä","Ruotsi","Väestö yhteensä",99,97,88,91,88,80,81,82
+"092 95 Rajakylä","Muu kieli","Väestö yhteensä",334,378,382,468,515,597,667,709
+"092 96 Itä-Hakkila","Kaikki äidinkielet","Väestö yhteensä",2757,2751,2756,2731,2733,2783,2769,2719
+"092 96 Itä-Hakkila","Suomi ja saame","Väestö yhteensä",2525,2506,2504,2484,2474,2504,2480,2442
+"092 96 Itä-Hakkila","Ruotsi","Väestö yhteensä",67,71,71,68,69,69,74,71
+"092 96 Itä-Hakkila","Muu kieli","Väestö yhteensä",165,174,181,179,190,210,215,206
+"092 97 Kuninkaanmäki","Kaikki äidinkielet","Väestö yhteensä",2029,2018,2065,2088,2111,2084,2082,2073
+"092 97 Kuninkaanmäki","Suomi ja saame","Väestö yhteensä",1781,1764,1793,1786,1813,1779,1751,1709
+"092 97 Kuninkaanmäki","Ruotsi","Väestö yhteensä",89,90,84,85,78,79,78,81
+"092 97 Kuninkaanmäki","Muu kieli","Väestö yhteensä",159,164,188,217,220,226,253,283
+"092 98 Sotunki","Kaikki äidinkielet","Väestö yhteensä",641,652,646,647,651,644,642,634
+"092 98 Sotunki","Suomi ja saame","Väestö yhteensä",518,520,526,521,531,524,519,510
+"092 98 Sotunki","Ruotsi","Väestö yhteensä",109,112,105,111,108,107,105,107
+"092 98 Sotunki","Muu kieli","Väestö yhteensä",14,20,15,15,12,13,18,17
+"092 99 Muut","Kaikki äidinkielet","Väestö yhteensä",3720,3998,4114,4306,4420,4830,4787,4817
+"092 99 Muut","Suomi ja saame","Väestö yhteensä",2847,2982,2940,2925,2885,2996,2918,2850
+"092 99 Muut","Ruotsi","Väestö yhteensä",92,95,103,107,111,113,118,110
+"092 99 Muut","Muu kieli","Väestö yhteensä",781,921,1071,1274,1424,1721,1751,1857
